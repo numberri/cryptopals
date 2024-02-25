@@ -14,8 +14,8 @@ pub fn challenge_3(hex: &str) -> String {
                 // note that E is not the most common letter here.
                 // it may be worth outputting several strings that have
                 // other common letters as the most frequent as well
-                if result.matches("e").count() > 
-                out.matches("e").count() {
+                if result.matches(" ").count() > 
+                out.matches(" ").count() {
                     out = result;
                 }
             }
@@ -25,3 +25,9 @@ pub fn challenge_3(hex: &str) -> String {
     }
     out
 }
+
+/* 
+in main.rs:
+let out = challenge_3("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736");
+println!("{}", out);
+*/

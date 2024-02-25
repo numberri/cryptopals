@@ -12,4 +12,16 @@ pub fn challenge_1(hex: &str) -> String {
 in main.rs:
 let out = challenge_1("49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d");
 println!("{}", out);
+
+Aside after doing this:
+I know that as someone who is not used to Rust, I am very inclined to
+do this using may let statements. Looking at this now, I realise that
+I may only need one
 */
+
+pub fn challenge_1_alt(hex: &str) -> String {
+    let out = BASE64.encode(&
+        HEXLOWER.decode(hex.as_bytes())
+        .unwrap());
+    out
+}
