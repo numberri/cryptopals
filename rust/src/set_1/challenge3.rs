@@ -14,6 +14,7 @@ pub fn challenge_3(hex: &str) -> String {
                 // note that E is not the most common letter here.
                 // it may be worth outputting several strings that have
                 // other common letters as the most frequent as well
+                // edit: ' ' is best lmao
                 if result.matches(" ").count() > 
                 out.matches(" ").count() {
                     out = result;

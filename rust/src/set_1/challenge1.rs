@@ -19,9 +19,15 @@ do this using may let statements. Looking at this now, I realise that
 I may only need one
 */
 
-pub fn challenge_1_alt(hex: &str) -> String {
+pub fn challenge_1_alt_a(hex: &str) -> String {
     let out = BASE64.encode(&
         HEXLOWER.decode(hex.as_bytes())
         .unwrap());
     out
+}
+
+//I have been informed I don't even need the let. Goddamn
+
+pub fn challenge_1_alt_b(hex: &str) -> String {
+    BASE64.encode(&HEXLOWER.decode(hex.as_bytes()).unwrap())
 }
