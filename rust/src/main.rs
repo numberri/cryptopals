@@ -4,10 +4,19 @@
 
 mod set_1 {
     pub mod challenge3;
+    pub mod challenge4;
 }
 use set_1::challenge3::*;
+use set_1::challenge4::*;
 
 fn main() {
-    let out = challenge_3("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736");
+    let Ok(inp) = std::fs::read_to_string(format!("../inputs/challenge4.txt")) else {
+        eprintln!("You fucked up on your file input :/"); 
+        return;
+    };
+    let out = challenge_4(&inp);
     println!("{}", out);
+    let extra = challenge_3(&out);
+    println!("Decoding of XORed string: {}", extra);
 }
+

@@ -10,8 +10,8 @@ pub fn challenge_1(hex: &str) -> String {
 
 /*
 in main.rs:
-let out = challenge_1("49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d");
-println!("{}", out);
+    let out = challenge_1("49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d");
+    println!("{}", out);
 
 Aside after doing this:
 I know that as someone who is not used to Rust, I am very inclined to
